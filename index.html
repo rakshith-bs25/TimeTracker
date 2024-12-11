@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Time Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.0/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div>
+    
+    </div> 
+<div class="container">
+    <h2>Work Time Calculator</h2>
+
+
+    
+    <div class="input-field">
+        <label for="loginTime">Login Time:</label>
+        <input type="time" id="loginTime" required>
+    </div>
+
+    <!-- Break section initially hidden -->
+    <div id="breakSection" style="display:none;">
+        <div class="input-field">
+            <label for="breakStart">Break Start Time:</label>
+            <input type="time" id="breakStart">
+        </div>
+
+        <div class="input-field">
+            <label for="breakEnd">Break End Time:</label>
+            <input type="time" id="breakEnd">
+        </div>
+
+        <button id="addBreakButton" onclick="addBreak()">Add Break</button>
+        <div class="input-field">
+            <label for="totalBreaks">Total Breaks (in minutes):</label>
+            <input type="number" id="totalBreaks" value="0" disabled>
+        </div>
+    </div>
+
+    <div class="output">
+        <p><strong>Total Time Worked:</strong> <span id="workedTime">0</span> hours</p>
+        <p><strong>Pending Time:</strong> <span id="pendingTime">8.5</span> hours</p>
+        <p><strong>Logout Time:</strong> <span id="logoutTime">-</span></p>
+    </div>
+
+    <button onclick="calculateTime()">Calculate Logout Time</button>
+    <button onclick="clearForm()">Clear</button>
+</div>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
